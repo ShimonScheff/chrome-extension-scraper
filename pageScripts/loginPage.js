@@ -1,6 +1,11 @@
-
+// Some of the fields might be missing if the user is already logged in or was before
 function login(helper) {
-    document.getElementById('ap_password').value = 'w2WlyYdX149Z';
+    try {
+        document.getElementById('ap_password').value = 'w2WlyYdX149Z';
+
+    } catch (e) {
+
+    }
     // insert user data
 
     // login
@@ -12,11 +17,12 @@ function login(helper) {
     }
 
 
-    const loginButton =  document.getElementById('signInSubmit');
-    helper.clickOnElement(loginButton);
+    try {
+        const loginButton =  document.getElementById('signInSubmit');
+        helper.clickOnElement(loginButton);
+    } catch (e) {
 
-
-    return
+    }
 }
 
 

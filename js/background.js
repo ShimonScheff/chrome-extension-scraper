@@ -1,6 +1,11 @@
 const appState = {
     currentPage: null,
-    injectScript: true
+    injectScript: true,
+    message: {
+        send: false,
+        data: null
+    },
+    currentCategory: -1
 };
 
 var BackgroundManager =
@@ -84,8 +89,6 @@ window.addEvent('domready', function () {
 
 chrome.runtime.onMessage.addListener((req, sender, res) => {
     console.log(req);
-    Utils.SafeExecuteScriptOnCurrentTab("pageScripts/helper.js", function (result) {
-    });
 
     switch (req.currentPage) {
         case 'affiliatePage':
@@ -101,16 +104,10 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
         case 'loginPage':
             appState.currentPage = req.currentPage;
             console.log('loginPage');
-            // TODO: user already logged in redirect to amazon and update page!
-            if (req.userLoggedIn) {
-                console.log('loginPage SafeExecuteScriptOnCurrentTab');
-                Utils.SafeExecuteScriptOnCurrentTab('pageScripts/' + appState.currentPage + '.js', function (result) {
-                });
-            }
 
             break;
 
-        case 'amazonAffiliateCrm':
+    /*    case 'amazonAffiliateCrm':
             // update current page but not running script
             appState.injectScript = false;
             setTimeout(() => {
@@ -122,9 +119,33 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
 
                 });
 
-            }, 600);
+            }, 1000);   */
+
+            case 'amazonAffiliateCrm':
+            // update current page but not running script
+                appState.currentPage = req.currentPage;
 
             break;
+
+        case 'amazonBestSellers':
+            chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+                chrome.tabs.update(tabs[0].id, {url: 'https://www.amazon.com/gp/bestsellers/'}, function () {
+                    appState.currentPage = req.currentPage;
+                    appState.currentCategory++;
+                    appState.message = {
+                        send: true,
+                        data: {
+                            categoryNumber: appState.currentCategory
+                        }
+                    }
+                });
+
+            });
+
+            break;
+
+            //TODO: category page that wiil get data return it and redirect to amazonBestSellers to go to next category
+            // until finish
 
         default:
             appState.injectScript = false;
@@ -133,8 +154,20 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
 
 
 chrome.tabs.onUpdated.addListener(function (tabId, info) {
+    console.log('info:', info);
     if (info.status && info.status === 'complete' && appState.injectScript) {
-        BackgroundManager.injectScripts(appState)
+        console.log('inject script:', appState.currentPage);
+        BackgroundManager.injectScripts(appState);
+
+        if (appState.message.send) {
+            setTimeout(() => {
+                chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+                    chrome.tabs.sendMessage(tabs[0].id, appState.message.data, function(response) {});
+                });
+            },1000);
+        }
+
+
     }
 });
 
