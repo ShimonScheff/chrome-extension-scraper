@@ -1,6 +1,12 @@
 (async function  () {
-    const helper = new Helper();
+    console.log('loginPage');
+    let helper;
 
+    try {
+        helper = new Helper();
+    } catch (e) {
+
+    }
     // insert user data
     document.getElementById('ap_password').value = 'w2WlyYdX149Z';
     document.getElementById('ap_email').value = 'checkspoint+2019@gmail.com';

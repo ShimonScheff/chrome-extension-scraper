@@ -1,6 +1,7 @@
 const appState = {
-    currentPage: null
-}
+    currentPage: null,
+    injectScript: true
+};
 
 var BackgroundManager =
     {
@@ -19,7 +20,7 @@ var BackgroundManager =
         },
         IsSenderMyPopup: function (sender) {
             try {
-                if (typeof(sender) == 'undefined')
+                if (typeof (sender) == 'undefined')
                     return false;
 
                 if (!sender.id || (sender.id != chrome.runtime.id))
@@ -29,8 +30,7 @@ var BackgroundManager =
                     return false;
 
                 return true;
-            }
-            catch (e) {
+            } catch (e) {
             }
             return false;
         },
@@ -100,18 +100,34 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
 
         case 'loginPage':
             appState.currentPage = req.currentPage;
+            console.log('loginPage');
+            // TODO: user already logged in redirect to amazon and update page!
+            if (req.userLoggedIn) {
+                console.log('loginPage SafeExecuteScriptOnCurrentTab');
+                Utils.SafeExecuteScriptOnCurrentTab('pageScripts/' + appState.currentPage + '.js', function (result) {
+                });
+            }
+
             break;
 
-            case 'amazonAffiliateCrm':
-            appState.currentPage = req.currentPage;
+        case 'amazonAffiliateCrm':
+            // update current page but not running script
+            appState.injectScript = false;
+            chrome.tabs.update(tabs[0].id, {url: 'https://www.amazon.com/gp/bestsellers/'}, function () {
+                appState.currentPage = 'amazonBestSellers';
+                appState.injectScript = true;
+            });
+
             break;
 
+        default:
+            appState.injectScript = false;
     }
 });
 
 
 chrome.tabs.onUpdated.addListener(function (tabId, info) {
-    if (info.status && info.status === 'complete') {
+    if (info.status && info.status === 'complete' && appState.injectScript) {
         BackgroundManager.injectScripts(appState)
     }
 });
