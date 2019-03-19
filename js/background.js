@@ -113,10 +113,16 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
         case 'amazonAffiliateCrm':
             // update current page but not running script
             appState.injectScript = false;
-            chrome.tabs.update(tabs[0].id, {url: 'https://www.amazon.com/gp/bestsellers/'}, function () {
-                appState.currentPage = 'amazonBestSellers';
-                appState.injectScript = true;
-            });
+            setTimeout(() => {
+                chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+                    chrome.tabs.update(tabs[0].id, {url: 'https://www.amazon.com/gp/bestsellers/'}, function () {
+                        appState.currentPage = 'amazonBestSellers';
+                        appState.injectScript = true;
+                    });
+
+                });
+
+            }, 600);
 
             break;
 

@@ -14,9 +14,11 @@
         currentPage: 'loginPage'
     };
 
-    if (window.location.href === 'https://affiliate-program.amazon.com/home') {
+/*    if (window.location.href === 'https://affiliate-program.amazon.com/home') {
         message.userLoggedIn = true
-    }
+    }*/
+
+    console.log(window.location.href);
 
     chrome.runtime.sendMessage(message, function (response) {
     });
