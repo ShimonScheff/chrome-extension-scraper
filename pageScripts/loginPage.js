@@ -6,7 +6,7 @@
     document.getElementById('ap_email').value = 'checkspoint+2019@gmail.com';
 
     // login
-    const loginButton =  document.getElementById('signInSubmit').;
+    const loginButton =  document.getElementById('signInSubmit');
     helper.clickOnElement(loginButton);
 
     // update state
