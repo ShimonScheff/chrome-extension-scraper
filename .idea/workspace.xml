@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a8cea5b-6a89-49b8-ad38-d01ab3c3f64b" name="Default Changelist" comment="start">
-      <change afterPath="$PROJECT_DIR$/../chrome-extension-scraper/.idea/chrome-extension-scraper.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chrome-extension-scraper/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chrome-extension-scraper/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chrome-extension-scraper/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6a8cea5b-6a89-49b8-ad38-d01ab3c3f64b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../chrome-extension-scraper/background.html" beforeDir="false" afterPath="$PROJECT_DIR$/../chrome-extension-scraper/background.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chrome-extension-scraper/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chrome-extension-scraper/js/background.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chrome-extension-scraper/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chrome-extension-scraper/js/utils.js" afterDir="false" />
@@ -57,7 +53,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="18" />
-          <entry key="html" value="28" />
+          <entry key="html" value="30" />
           <entry key="js" value="1340" />
           <entry key="json" value="54" />
           <entry key="txt" value="7" />
@@ -66,7 +62,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="18" />
-          <entry key="HTML" value="28" />
+          <entry key="HTML" value="30" />
           <entry key="JSON" value="54" />
           <entry key="JavaScript" value="1340" />
           <entry key="PLAIN_TEXT" value="7" />
@@ -78,7 +74,11 @@
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../chrome-extension-scraper/background.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -114,6 +114,7 @@
         <option value="$PROJECT_DIR$/js/background.js" />
         <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/pageScripts/loginPage.js" />
+        <option value="$PROJECT_DIR$/../chrome-extension-scraper/background.html" />
       </list>
     </option>
   </component>
@@ -176,7 +177,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552936537075</updated>
-      <workItem from="1552936538234" duration="19247000" />
+      <workItem from="1552936538234" duration="19498000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1552957957651</created>
@@ -185,21 +186,36 @@
       <option name="project" value="LOCAL" />
       <updated>1552957957651</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="start">
+      <created>1552958141730</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1552958141730</updated>
+    </task>
+    <task id="LOCAL-00003" summary="start">
+      <created>1552958163504</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1552958163504</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19247000" />
+    <option name="totallyTimeSpent" value="19498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="6" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17448603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32947367" />
+      <window_info anchor="bottom" id="Version Control" visible="true" weight="0.32947367" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32947367" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -220,6 +236,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="start" />
     <option name="LAST_COMMIT_MESSAGE" value="start" />
   </component>
@@ -336,7 +354,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../chrome-extension-scraper/background.html">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
