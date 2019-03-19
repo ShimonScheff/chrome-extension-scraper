@@ -102,6 +102,10 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
             appState.currentPage = req.currentPage;
             break;
 
+            case 'amazonAffiliateCrm':
+            appState.currentPage = req.currentPage;
+            break;
+
     }
 });
 
