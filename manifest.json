@@ -1,0 +1,28 @@
+﻿{
+	"name": "Scraper",
+	"description": "Scraper Description",
+	"version": "1.0.1",
+	"manifest_version": 2,
+	"icons": 
+			{ 
+				"16": "icon16.png",	
+				"48": "icon16.png",
+				"32": "icon16.png"
+			}, 
+	"browser_action": 
+			{
+				"default_icon": "icon16.png",
+				"default_title": "Scraper",
+				"default_popup": "popup.html"
+			},
+	"background": 
+			{
+				"page": "background.html"
+			},
+  "permissions": [
+	  "webNavigation",
+      "https://*/*",
+      "http://*/*",
+      "tabs"
+  ]
+}
