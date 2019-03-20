@@ -40,7 +40,7 @@ function login(helper) {
 
     // update state
     const message = {
-        currentPage: 'amazonAffiliateCrm'
+        nextPage: 'amazonAffiliateCrm'
     };
 
     chrome.runtime.sendMessage(message, function (response) {

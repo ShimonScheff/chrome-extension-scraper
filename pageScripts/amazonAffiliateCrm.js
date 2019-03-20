@@ -1,7 +1,7 @@
 (async function  () {
     console.log('amazonAffiliateCrm');
     const message = {
-        currentPage: 'amazonBestSellers'
+        nextPage: 'amazonBestSellers'
     };
 
     chrome.runtime.sendMessage(message, function (response) {

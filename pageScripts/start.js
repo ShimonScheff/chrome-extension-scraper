@@ -4,7 +4,7 @@ alert('Start Scraping');
 };*/
 
 const message = {
-    currentPage: 'amazonBestSellers'
+    nextPage: 'amazonBestSellers'
 };
 
 chrome.runtime.sendMessage(message, function (response) {

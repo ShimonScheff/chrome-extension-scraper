@@ -11,7 +11,7 @@
     helper.clickOnElement(loginButton[0]);
 
     const message = {
-        currentPage: 'loginPage'
+        nextPage: 'loginPage'
     };
 
 /*    if (window.location.href === 'https://affiliate-program.amazon.com/home') {

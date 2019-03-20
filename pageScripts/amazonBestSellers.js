@@ -1,23 +1,32 @@
 (async function  () {
-    console.log('amazonBestSellers');
-    const mainList = document.getElementById('zg_browseRoot').getAttribute("ul");
+    let helper;
 
-    console.log(mainList);
+    try {
+        helper = new Helper();
+    } catch (e) {
+
+    }
+    console.log('amazonBestSellers');
+    const categoryList = document.getElementById('zg_browseRoot').children[1];
+
+    console.log(categoryList);
 
     chrome.runtime.onMessage.addListener(
         function(request, sender, sendResponse) {
-            console.log(request)
+            console.log(request);
 
-            // TODO: get the right category
+            // get current category url
+            const category = categoryList.children[0].children[0];
+            console.log(category);
+            // Click on the category
+            helper.clickOnElement(category);
 
-            // TODO: Click on the category
+            const message = {
+                nextPage: 'category'
+            };
 
-            // TODO: Send message 'categoryData'
+            chrome.runtime.sendMessage(message, function (response) {
+            });
         });
-/*    const message = {
-        currentPage: 'affiliatePage'
-    };
 
-    chrome.runtime.sendMessage(message, function (response) {
-    });*/
 })();

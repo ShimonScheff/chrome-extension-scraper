@@ -1,11 +1,12 @@
 const appState = {
-    currentPage: null,
-    injectScript: true,
+    nextPage: null,
+    injectScript: false,
     message: {
         send: false,
         data: null
     },
-    currentCategory: -1
+    currentCategory: -1,
+    excelData: []
 };
 
 var BackgroundManager =
@@ -13,7 +14,7 @@ var BackgroundManager =
         injectScripts: function (state) {
             Utils.SafeExecuteScriptOnCurrentTab('pageScripts/helper.js', function (result) {
             });
-            Utils.SafeExecuteScriptOnCurrentTab('pageScripts/' + state.currentPage + '.js', function (result) {
+            Utils.SafeExecuteScriptOnCurrentTab('pageScripts/' + state.nextPage + '.js', function (result) {
             });
         },
         OnDomReady: function () {
@@ -90,11 +91,12 @@ window.addEvent('domready', function () {
 chrome.runtime.onMessage.addListener((req, sender, res) => {
     console.log(req);
 
-    switch (req.currentPage) {
+    switch (req.nextPage) {
         case 'affiliatePage':
+            appState.injectScript = true;
             chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
                 chrome.tabs.update(tabs[0].id, {url: 'https://affiliate-program.amazon.com/'}, function () {
-                    appState.currentPage = req.currentPage
+                    appState.nextPage = req.nextPage
                 });
 
             });
@@ -102,35 +104,23 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
             break;
 
         case 'loginPage':
-            appState.currentPage = req.currentPage;
+            appState.nextPage = req.nextPage;
             console.log('loginPage');
 
             break;
 
-    /*    case 'amazonAffiliateCrm':
-            // update current page but not running script
-            appState.injectScript = false;
-            setTimeout(() => {
-                chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-                    chrome.tabs.update(tabs[0].id, {url: 'https://www.amazon.com/gp/bestsellers/'}, function () {
-                        appState.currentPage = 'amazonBestSellers';
-                        appState.injectScript = true;
-                    });
-
-                });
-
-            }, 1000);   */
-
             case 'amazonAffiliateCrm':
             // update current page but not running script
-                appState.currentPage = req.currentPage;
+                appState.nextPage = req.nextPage;
 
             break;
 
         case 'amazonBestSellers':
+            // TODO: Delete injectScript
+            appState.injectScript = true;
             chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
                 chrome.tabs.update(tabs[0].id, {url: 'https://www.amazon.com/gp/bestsellers/'}, function () {
-                    appState.currentPage = req.currentPage;
+                    appState.nextPage = req.nextPage;
                     appState.currentCategory++;
                     appState.message = {
                         send: true,
@@ -141,6 +131,12 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
                 });
 
             });
+
+            break;
+
+        case 'category':
+            appState.nextPage = req.nextPage;
+            addTitleName(req.categoryName);
 
             break;
 
@@ -156,7 +152,7 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
 chrome.tabs.onUpdated.addListener(function (tabId, info) {
     console.log('info:', info);
     if (info.status && info.status === 'complete' && appState.injectScript) {
-        console.log('inject script:', appState.currentPage);
+        console.log('inject script:', appState.nextPage);
         BackgroundManager.injectScripts(appState);
 
         if (appState.message.send) {
@@ -170,6 +166,13 @@ chrome.tabs.onUpdated.addListener(function (tabId, info) {
 
     }
 });
+
+
+// setters for excelData
+
+function addTitleName(categoryName) {
+    appState.excelData.push({categoryName})
+}
 
 
 
