@@ -140,8 +140,12 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
 
             break;
 
-            //TODO: category page that wiil get data return it and redirect to amazonBestSellers to go to next category
-            // until finish
+
+        case 'categoryBestSeller':
+            appState.nextPage = req.nextPage;
+            break;
+
+
 
         default:
             appState.injectScript = false;

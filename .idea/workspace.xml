@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a8cea5b-6a89-49b8-ad38-d01ab3c3f64b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pageScripts/category.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pageScripts/categoryBestSeller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageScripts/affiliatePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageScripts/affiliatePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageScripts/amazonAffiliateCrm.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageScripts/amazonAffiliateCrm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageScripts/amazonBestSellers.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageScripts/amazonBestSellers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageScripts/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageScripts/loginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pageScripts/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/pageScripts/start.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,8 +29,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/background.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="148" column="3" lean-forward="true" selection-start-line="148" selection-start-column="3" selection-end-line="148" selection-end-column="3" />
+            <state relative-caret-position="340">
+              <caret line="143" column="34" lean-forward="true" selection-start-line="143" selection-start-column="34" selection-end-line="143" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageScripts/categoryBestSeller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageScripts/category.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-end-line="35" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -57,66 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pageScripts/affiliatePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pageScripts/amazonBestSellers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="13" column="41" lean-forward="true" selection-end-line="31" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pageScripts/category.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pageScripts/amazonAffiliateCrm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pageScripts/loginPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-              <folding>
-                <element signature="e#76#114#0" />
-                <element signature="e#125#141#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manifest.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pageScripts/start.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="22">
+              <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -159,9 +114,10 @@
         <option value="$PROJECT_DIR$/pageScripts/loginPage.js" />
         <option value="$PROJECT_DIR$/pageScripts/affiliatePage.js" />
         <option value="$PROJECT_DIR$/pageScripts/amazonBestSellers.js" />
-        <option value="$PROJECT_DIR$/pageScripts/category.js" />
         <option value="$PROJECT_DIR$/pageScripts/start.js" />
+        <option value="$PROJECT_DIR$/pageScripts/category.js" />
         <option value="$PROJECT_DIR$/js/background.js" />
+        <option value="$PROJECT_DIR$/pageScripts/categoryBestSeller.js" />
       </list>
     </option>
   </component>
@@ -229,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1552936537075</updated>
       <workItem from="1552936538234" duration="19498000" />
-      <workItem from="1552985834548" duration="9248000" />
+      <workItem from="1552985834548" duration="12862000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1552957957651</created>
@@ -287,11 +243,25 @@
       <option name="project" value="LOCAL" />
       <updated>1553002182548</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Category title">
+      <created>1553071735866</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1553071735866</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Category click on best seller">
+      <created>1553073902863</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1553073902863</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28746000" />
+    <option name="totallyTimeSpent" value="32360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="1" width="1920" height="1080" extended-state="6" />
@@ -326,7 +296,9 @@
     <MESSAGE value="Add amazonAffiliateCRM script" />
     <MESSAGE value="Login to affiliate" />
     <MESSAGE value="Fix login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix login" />
+    <MESSAGE value="Category title" />
+    <MESSAGE value="Category click on best seller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Category click on best seller" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/style.css">
@@ -378,13 +350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/background.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pageScripts/start.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -403,13 +368,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageScripts/amazonBestSellers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="41" lean-forward="true" selection-end-line="31" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -436,24 +394,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pageScripts/category.js">
+    <entry file="file://$PROJECT_DIR$/pageScripts/affiliatePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pageScripts/affiliatePage.js">
+    <entry file="file://$PROJECT_DIR$/pageScripts/amazonBestSellers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="378">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageScripts/category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageScripts/categoryBestSeller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="148" column="3" lean-forward="true" selection-start-line="148" selection-start-column="3" selection-end-line="148" selection-end-column="3" />
+        <state relative-caret-position="340">
+          <caret line="143" column="34" lean-forward="true" selection-start-line="143" selection-start-column="34" selection-end-line="143" selection-end-column="34" />
         </state>
       </provider>
     </entry>
